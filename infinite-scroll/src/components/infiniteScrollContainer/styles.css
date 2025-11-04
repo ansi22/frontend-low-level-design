@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.subContainer {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 400px;
+    background-color: bisque;
+    overflow-y: auto;
+}
+
+.entity {
+    padding: 20px;
+}
