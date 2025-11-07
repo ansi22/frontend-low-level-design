@@ -14,7 +14,13 @@ import "./App.css";
  * @param param0
  * @returns
  */
-const List = ({ list, addNodeToList, deleteNodeFromList, editNode }: any) => {
+const List = ({
+  list,
+  addNodeToList,
+  deleteNodeFromList,
+  editNode,
+  setData,
+}: any) => {
   const [isExpanded, setExpanded] = useState<any>({});
   return (
     <div className="container">
@@ -49,7 +55,7 @@ const List = ({ list, addNodeToList, deleteNodeFromList, editNode }: any) => {
                   height={20}
                   onClick={(e) => {
                     e.preventDefault();
-                    addNodeToList(node.id);
+                    addNodeToList(node.id, setData);
                   }}
                 />
                 <img
@@ -59,7 +65,7 @@ const List = ({ list, addNodeToList, deleteNodeFromList, editNode }: any) => {
                   height={16}
                   onClick={(e) => {
                     e.preventDefault();
-                    editNode(node.id);
+                    editNode(node.id, setData);
                   }}
                 />
                 <img
@@ -69,7 +75,7 @@ const List = ({ list, addNodeToList, deleteNodeFromList, editNode }: any) => {
                   height={22}
                   onClick={(e) => {
                     e.preventDefault();
-                    deleteNodeFromList(node.id);
+                    deleteNodeFromList(node.id, setData);
                   }}
                 />
               </span>
@@ -89,7 +95,7 @@ const List = ({ list, addNodeToList, deleteNodeFromList, editNode }: any) => {
                   height={16}
                   onClick={(e) => {
                     e.preventDefault();
-                    editNode(node.id);
+                    editNode(node.id, setData);
                   }}
                 />
                 <img
@@ -99,7 +105,7 @@ const List = ({ list, addNodeToList, deleteNodeFromList, editNode }: any) => {
                   height={22}
                   onClick={(e) => {
                     e.preventDefault();
-                    deleteNodeFromList(node.id);
+                    deleteNodeFromList(node.id, setData);
                   }}
                 />
               </span>
