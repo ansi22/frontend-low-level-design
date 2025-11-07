@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chipsArray {
+  display: flex;
+  gap: 12px;
+}
+
+.chip {
+  padding: 12px;
+  border-radius: 12px;
+  background-color: beige;
+}
